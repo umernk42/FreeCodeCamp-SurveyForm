@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title" class="form_title">Basic Survey Form</h1>
+      <p id="description" class="form_description">
+        Thank you for taking the time to help us improve the platform
+      </p>
+    </header>
+    <main>
+      <form id="survey-form" class="main_form">
+        <div class="form_group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="form_control"
+            required
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="form_group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="form_control"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form_group">
+            <label id="number-label" for="age">Age <span class="clue">(optional)</span></label>
+            <input
+              id="number"
+              name="age"
+              type="number"
+              min="10"
+              max="99"
+              class="form_control"
+              placeholder="Age"
+            />
+        </div>
+        <div class="form_group">
+            <p>Which option best describes your current role?</p>
+            <select id="dropdown" name="dropdown" class="form_control" required>
+                <option disabled value selected>Select current role</option>
+                <option value="student">Student</option>
+                <option value="fullTime">Full Time Employed</option>
+                <option value="partTime">Part Time Employed</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form_group radio_group">
+            <p>Would you recommend Web Development to a friend</p>
+            <div>
+                <input type="radio" id="definitely" name="choice" value="definitely"  class="input_radio" checked/>
+                <label for="definitely">Definitely</label>
+            </div>
+            <div>
+                <input type="radio" id="maybe" name="choice" value="maybe" class="input_radio" required/>
+                <label for="maybe">Maybe</label>
+            </div>
+            <div>
+                <input type="radio" id="not_sure" name="choice" value="not_sure"  class="input_radio"/>
+                <label for="not_sure">Not Sure</label>
+            </div>    
+        </div>
+        <div class="form_group">
+            <p>What is your favorite JavaScript Framework</p>
+            <select id="fav_lang" name="fav_lang" class="form_control">
+                <option disabled selected value>Select an option</option>
+                <option value="react">React</option>
+                <option value="angular">Angular</option>
+                <option value="vue">Vue</option>
+                <option value="otherFrameWork">Other</option>
+            </select>
+        </div>
+        <div class="form_group checkbox_group">
+            <p>Which areas of study do you need to improve on? <span class="clue">(Check all that apply)</span></p>
+            <div>
+                <input type="checkbox" id="html" value="html" name="improve_choice" class="input_check"/>
+                <label for="html">HTML</label>
+            </div>
+            <div>
+                <input type="checkbox" id="css" value="css" name="improve_choice" class="input_check"/>
+                <label for="css">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" id="javascript" value="javascript" name="improve_choice" class="input_check"/>
+                <label for="javascript">JavaScript</label>
+            </div>
+            <div>
+                <input type="checkbox" id="front-end" value="front-end" name="improve_choice" class="input_check"/>
+                <label for="front-end">Front-end</label>
+            </div>
+            <div>
+                <input type="checkbox" id="back-end" value="back-end" name="improve_choice" class="input_check"/>
+                <label for="back-end">Back-end</label>
+            </div>
+            <div>
+                <input type="checkbox" id="api" value="api" name="improve_choice" class="input_check"/>
+                <label for="api">APIs</label>
+            </div>
+            <div>
+                <input type="checkbox" id="git" value="git" name="improve_choice" class="input_check"/>
+                <label for="git">Git</label>
+            </div>
+        </div>
+        <div class="form_group">
+            <p>Any comments or suggestions?</p>
+            <textarea id="text_area" class="text_area" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div class="form_group">
+            <button id="submit" type="submit">Submit</button>
+        </div>  
+      </form>
+    </main>
+  </body>
+</html>
